@@ -1,0 +1,25 @@
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/agent_platform?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY:sk-dev-placeholder}
+      base-url: ${OPENAI_BASE_URL:https://api.openai.com}
+
+milvus:
+  host: localhost
+  port: 19530
+
+logging:
+  level:
+    com.agent.platform: DEBUG
+    org.springframework.ai: DEBUG
